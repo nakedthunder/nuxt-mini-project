@@ -42,10 +42,11 @@ export default {
             searchKeyword : '',
         }
     },
-    methods : {
-        moveToDetailPage (id){
-            console.log(id)
-            this.$router.push(`detail/${id}`)
+    methods :{
+        //상세 페이지 이동 
+        moveToDetailPage(id){
+            console.log(id) //상세페이지를 클릭했을때 product.id를 확인할 수 있음 
+            this.$router.push(`detail/${id}`) //URL정의, 폴더 페이지 만들어줘야함 
         },
         async searchProducts(){
           //searchProducts 올라올때 값이 무엇인지 암 검색하고자하는 입력된 값 
