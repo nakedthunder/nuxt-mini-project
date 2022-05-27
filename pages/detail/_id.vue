@@ -11,7 +11,7 @@
             <div class="side-panel">
                 <p class="name">{{product.name}}</p>
                 <p class="price">{{product.price}}</p>
-                <!-- <button type="button" @click="addToCart">Add to Cart</button> -->
+                <button type="button" @click="addToCart">Add to Cart</button> 
             </div>
         </div>
     </div>
@@ -29,6 +29,13 @@ export default {
         //porduct에서 넣어준 reposne.data의 값인데 asyncData잘 못 넣으니 return 으로 값을 받지 못함 
         const product = response.data
         return {product} //상품정보를 
+    },
+    methods : {
+      addToCart (){
+        //addCartItem호출,this.product파라미터를 넘겨줌 
+        this.$store.commit('addCartItem', this.product) //내부적으로 연결이 되어 접근가능
+        this.$router.push(`/cart`)
+      }
     }
 
     // created(){
