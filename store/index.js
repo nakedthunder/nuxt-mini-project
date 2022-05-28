@@ -1,9 +1,10 @@
 export const state = () => ({
-    //객체 반환 cartItems 공통의 데이터 
+    //공통 데이터 
     cartItems : [], 
 })
 
 export const mutations = {
+    //this.$store.commit();으로 접근가능 
     addCartItem(state, cartItem){
         state.cartItems.push(cartItem)
     }
