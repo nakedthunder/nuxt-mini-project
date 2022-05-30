@@ -102,6 +102,6 @@ export default {
   font-weight: 500;
 }
 .list header{
-  height: 50px;
+  height: 55px;
 }
 </style>
