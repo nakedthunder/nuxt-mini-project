@@ -32,7 +32,7 @@ export default {
     },
     methods : {
       addToCart (){
-        //addCartItem호출,this.product파라미터를 넘겨줌 
+        //this.$store.commit 인스턴스 내부적으로 연결해어 접근가능
         this.$store.commit('addCartItem', this.product) //내부적으로 연결이 되어 접근가능
         this.$router.push(`/cart`)
       }
