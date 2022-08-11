@@ -1,3 +1,4 @@
+// import pictureTemp from '@/temp/pictureTemp'
 export const state = () => ({
     //객체 반환(공통 데이터)
     cartItems : [], 
